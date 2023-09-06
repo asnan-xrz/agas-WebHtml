@@ -61,7 +61,16 @@
             text-align: center;
         }
 
+        form {
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid;
+        }
 
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
     </style>
     <title>AGAS</title>
 </head>
@@ -118,20 +127,28 @@
 
             </section>
 
-            
 
             <section>
                 <h2>Kontak</h2>
                 <p>Email saya: <a href="mailto:agasananta04@gmail.com">agasananta04@gmail.com</a></p>
                 <p>+62 819 4322 9052</p>
-
                 
+                <h2>Komentar</h2>
+                <form action="">
+                    <label for="nama">Nama</label>
+                    <input type="text"><br><br>
+                    <label for="email">Email</label>
+                    <input type="email" name="" id=""><br><br>
+                    <label for="komentar">Komentar</label>
+                    <textarea name="komentar" id="" cols="30" rows="10" placeholder="Berikan komentar Anda"></textarea><br><br>
+                    <input type="submit" name="" id="">
+                </form>
 
             </section>
         </main>
 
         <footer>
-            <p>&copy; Agas's Website</p>
+            <p style="text-align: center;">&copy; Agas's Website</p>
         </footer>
     </body>
 
