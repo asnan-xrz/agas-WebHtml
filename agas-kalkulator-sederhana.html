@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+    <h2 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Agas Ananta Wijaya (5027221004) </h2> <br>
+    <h2 style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Kalkulator Sederhana </h2>
+    <div id="kalkulator" style="font-family: Arial, Helvetica, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center;">
+        <input type="text" id="angka1" placeholder="Angka 1">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" id="angka2" placeholder="Angka 2">
+        <button id="hitung">Hitung</button>
+        <input type="text" id="hasil" placeholder="Hasil">
+        <button id="clear">Clear</button>
+    </div>
+
+<!-- ----------------------kode javascript------------------------- -->
+
+<script>
+//fungsi buat ngitung hasil kalkulator
+    function hitung() {
+        //ngambil nilai dari input
+        const angka1 = parseFloat(document.getElementById("angka1").value);
+        const angka2 = parseFloat (document.getElementById("angka2").value);
+        const operator = document.getElementById("operator").value;
+
+        //ngitung hasil sesuai operator
+        let hasil = 0;
+        switch (operator) {
+            case "+":
+                hasil = angka1 + angka2;
+            break;
+
+            case "-":
+                hasil = angka1 - angka2;
+            break;
+
+            case "*":
+                hasil = angka1 * angka2;
+            break;
+
+            case "/":
+                hasil = angka1 / angka2;
+            break;
+            
+        }
+        //nampilin hasil 
+        document.getElementById("hasil").value = hasil;
+
+    }
+    //nambahin event listener
+    document.getElementById("hitung").addEventListener("click", hitung);
+
+    //buat nge clear
+    function clearInput() {
+        document.getElementById("angka1").value = "";
+        document.getElementById("angka2").value = "";
+        document.getElementById("hasil").value = "";
+    }
+
+    //event listener untuk clear
+    document.getElementById("clear").addEventListener("click", clearInput);
+</script>
+
+</body>
+</html>
